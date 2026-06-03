@@ -3,5 +3,6 @@
 #include "defines.hpp"
 #include "lbm.hpp"
 #include "shapes.hpp"
+#include "graphics.hpp"
 
 void main_setup(); // main setup script

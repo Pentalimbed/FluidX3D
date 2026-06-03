@@ -32,7 +32,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 #if defined(_WIN32)
 	wait();
 #endif // Windows
-} /**/
+}
 #endif // BENCHMARK
 
 
@@ -56,7 +56,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 	lbm.graphics.visualization_modes = VIS_STREAMLINES;
 	lbm.run();
 	//lbm.run(1000u); lbm.u.read_from_device(); println(lbm.u.x[lbm.index(Nx/2u, Ny/2u, Nz/2u)]); wait(); // test for binary identity
-} /**/
+} */
 
 
 
@@ -77,7 +77,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 	lbm.graphics.visualization_modes = VIS_FIELD;
 	lbm.graphics.slice_mode = 3;
 	lbm.run();
-} /**/
+} */
 
 
 
@@ -141,7 +141,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 		error_min = fmin(error_min, sqrt(error_dif/error_sum));
 		print_info("Poiseuille flow error after t="+to_string(lbm.get_t())+" is "+to_string(100.0*error_min, 3u)+"%"); // typical expected L2 errors: 2-5% (Krüger p. 256)
 	}
-} /**/
+} */
 
 
 
@@ -184,11 +184,11 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 		E2 = E1;
 		E1 = E0;
 	}
-} /**/
+} */
 
 
 
-/*void main_setup() { // cylinder in rectangular duct; required extensions in defines.hpp: VOLUME_FORCE, INTERACTIVE_GRAPHICS
+void main_setup() { // cylinder in rectangular duct; required extensions in defines.hpp: VOLUME_FORCE, INTERACTIVE_GRAPHICS
 	// ################################################################## define simulation box size, viscosity and volume force ###################################################################
 	const float Re = 25000.0f;
 	const float D = 64.0f;
@@ -205,7 +205,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 	}); // ####################################################################### run simulation, export images and data ##########################################################################
 	lbm.graphics.visualization_modes = VIS_FLAG_LATTICE|VIS_Q_CRITERION;
 	lbm.run();
-} /**/
+}
 
 
 
@@ -229,7 +229,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 	lbm.graphics.visualization_modes = VIS_FLAG_LATTICE|VIS_STREAMLINES;
 	lbm.run();
 	//lbm.run(4000u); lbm.u.read_from_device(); println(lbm.u.x[lbm.index(Nx/4u, Ny/4u, Nz/2u)]); wait(); // test for binary identity
-} /**/
+} */
 
 
 
@@ -246,7 +246,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 	}); // ####################################################################### run simulation, export images and data ##########################################################################
 	lbm.graphics.visualization_modes = VIS_FLAG_LATTICE|VIS_STREAMLINES;
 	lbm.run();
-} /**/
+} */
 
 
 
@@ -265,7 +265,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 	lbm.graphics.visualization_modes = VIS_FLAG_LATTICE|VIS_FIELD;
 	lbm.graphics.slice_mode = 3;
 	lbm.run();
-} /**/
+} */
 
 
 
@@ -288,7 +288,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 	}); // ####################################################################### run simulation, export images and data ##########################################################################
 	lbm.graphics.visualization_modes = VIS_FLAG_LATTICE|VIS_STREAMLINES|VIS_PARTICLES;
 	lbm.run();
-} /**/
+} */
 
 
 
@@ -310,7 +310,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 	}); // ####################################################################### run simulation, export images and data ##########################################################################
 	lbm.graphics.visualization_modes = VIS_FLAG_SURFACE|VIS_Q_CRITERION;
 	lbm.run();
-} /**/
+} */
 
 
 
@@ -349,7 +349,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 	}); // ####################################################################### run simulation, export images and data ##########################################################################
 	lbm.graphics.visualization_modes = VIS_FLAG_SURFACE|VIS_Q_CRITERION;
 	lbm.run();
-} /**/
+} */
 
 
 
@@ -398,7 +398,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 		lbm.run(1u, lbm_T); // run dt time steps
 	}
 	lbm.write_status();
-} /**/
+} */
 
 
 
@@ -429,7 +429,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 #else // GRAPHICS && !INTERACTIVE_GRAPHICS
 	lbm.run();
 #endif // GRAPHICS && !INTERACTIVE_GRAPHICS
-} /**/
+} */
 
 
 
@@ -468,7 +468,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 #else // GRAPHICS && !INTERACTIVE_GRAPHICS
 	lbm.run();
 #endif // GRAPHICS && !INTERACTIVE_GRAPHICS
-} /**/
+} */
 
 
 
@@ -512,7 +512,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 		mesh->rotate(rotation); // rotate mesh
 		lbm.voxelize_mesh_on_device(mesh);
 	}
-} /**/
+} */
 
 
 
@@ -545,7 +545,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 		}
 #endif // GRAPHICS && !INTERACTIVE_GRAPHICS
 	}
-} /**/
+} */
 
 
 
@@ -588,7 +588,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 		}
 #endif // GRAPHICS && !INTERACTIVE_GRAPHICS
 	}
-} /**/
+} */
 
 
 
@@ -627,7 +627,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 #else // GRAPHICS && !INTERACTIVE_GRAPHICS
 	lbm.run();
 #endif // GRAPHICS && !INTERACTIVE_GRAPHICS
-} /**/
+} */
 
 
 
@@ -666,7 +666,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 #else // GRAPHICS && !INTERACTIVE_GRAPHICS
 	lbm.run();
 #endif // GRAPHICS && !INTERACTIVE_GRAPHICS
-} /**/
+} */
 
 
 
@@ -704,7 +704,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 #else // GRAPHICS && !INTERACTIVE_GRAPHICS
 	lbm.run();
 #endif // GRAPHICS && !INTERACTIVE_GRAPHICS
-} /**/
+} */
 
 
 
@@ -764,7 +764,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 		lbm.run(1u, lbm_T);
 	}
 	//lbm.write_status(path);
-} /**/
+} */
 
 
 
@@ -818,7 +818,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 		}
 #endif // GRAPHICS && !INTERACTIVE_GRAPHICS
 	}
-} /**/
+} */
 
 
 
@@ -884,7 +884,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 		}
 #endif // GRAPHICS && !INTERACTIVE_GRAPHICS
 	}
-} /**/
+} */
 
 
 
@@ -947,7 +947,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 #else // GRAPHICS && !INTERACTIVE_GRAPHICS
 	lbm.run();
 #endif // GRAPHICS && !INTERACTIVE_GRAPHICS
-} /**/
+} */
 
 
 
@@ -1007,7 +1007,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 	lbm.graphics.visualization_modes = lbm.get_D()==1u ? VIS_PHI_RAYTRACE : VIS_PHI_RASTERIZE;
 	lbm.run();
 	//lbm.run(1000u); lbm.u.read_from_device(); println(lbm.u.x[lbm.index(Nx/2u, Ny/4u, Nz/4u)]); wait(); // test for binary identity
-} /**/
+} */
 
 
 
@@ -1021,7 +1021,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 	}); // ####################################################################### run simulation, export images and data ##########################################################################
 	lbm.graphics.visualization_modes = lbm.get_D()==1u ? VIS_PHI_RAYTRACE : VIS_PHI_RASTERIZE;
 	lbm.run();
-} /**/
+} */
 
 
 
@@ -1063,7 +1063,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 		lbm.u.write_to_device();
 		lbm.run(1u);
 	}
-} /**/
+} */
 
 
 
@@ -1102,7 +1102,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 		lbm.u.write_to_device();
 		lbm.run(100u);
 	}
-} /**/
+} */
 
 
 
@@ -1123,7 +1123,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 	}); // ####################################################################### run simulation, export images and data ##########################################################################
 	lbm.graphics.visualization_modes = lbm.get_D()==1u ? VIS_PHI_RAYTRACE : VIS_PHI_RASTERIZE;
 	lbm.run();
-} /**/
+} */
 
 
 
@@ -1207,7 +1207,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 #else // GRAPHICS && !INTERACTIVE_GRAPHICS
 	lbm.run();
 #endif // GRAPHICS && !INTERACTIVE_GRAPHICS
-} /**/
+} */
 
 
 
@@ -1247,7 +1247,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 	}); // ####################################################################### run simulation, export images and data ##########################################################################
 	lbm.graphics.visualization_modes = lbm.get_D()==1u ? VIS_PHI_RAYTRACE : VIS_PHI_RASTERIZE;
 	lbm.run();
-} /**/
+} */
 
 
 
@@ -1273,7 +1273,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 		lbm.set_f(0.0f, 0.0f, 0.0f);
 		lbm.run(3000u);
 	}
-} /**/
+} */
 
 
 
@@ -1290,7 +1290,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 	}); // ####################################################################### run simulation, export images and data ##########################################################################
 	lbm.graphics.visualization_modes = VIS_FLAG_LATTICE|VIS_PHI_RASTERIZE;
 	lbm.run();
-} /**/
+} */
 
 
 
@@ -1314,7 +1314,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 	}); // ####################################################################### run simulation, export images and data ##########################################################################
 	lbm.graphics.visualization_modes = lbm.get_D()==1u ? VIS_PHI_RAYTRACE : VIS_PHI_RASTERIZE;
 	lbm.run();
-} /**/
+} */
 
 
 
@@ -1341,7 +1341,7 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 	}); // ####################################################################### run simulation, export images and data ##########################################################################
 	lbm.graphics.visualization_modes = VIS_FLAG_LATTICE|VIS_STREAMLINES;
 	lbm.run();
-} /**/
+} */
 
 
 
@@ -1363,4 +1363,4 @@ void main_setup() { // benchmark; required extensions in defines.hpp: BENCHMARK,
 	lbm.graphics.visualization_modes = VIS_FLAG_LATTICE|VIS_STREAMLINES;
 	lbm.run();
 	//lbm.run(1000u); lbm.u.read_from_device(); println(lbm.u.x[lbm.index(Nx/2u, Ny/2u, Nz/2u)]); wait(); // test for binary identity
-} /**/
+} */

@@ -2,7 +2,9 @@
 
 #include "defines.hpp"
 #include "opencl.hpp"
+#ifdef GRAPHICS
 #include "graphics.hpp"
+#endif // GRAPHICS
 #include "units.hpp"
 #include "info.hpp"
 

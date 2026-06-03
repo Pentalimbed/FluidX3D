@@ -6,12 +6,10 @@
 //#define GRAPHICS
 
 #include "defines.hpp"
+#include "runtime.hpp"
 #include "utilities.hpp"
 #include <atomic>
 #include <mutex>
-
-extern vector<string> main_arguments; // console arguments
-extern std::atomic_bool running;
 
 #ifdef GRAPHICS
 void main_label(const double frametime); // implement these three

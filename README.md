@@ -1925,7 +1925,7 @@ Colors: 🔴 AMD, 🔵 Intel, 🟢 Nvidia, ⚪ Apple, 🟣 ARM, 🟡 Glenfly
 
 - <details><summary>Graphics support on Apple macOS?</summary>
 
-  <br>On macOS and Android, [`INTERACTIVE_GRAPHICS`](src/defines.hpp) mode is not supported, as no X11 is available. You can still use [`INTERACTIVE_GRAPHICS_ASCII`](src/defines.hpp) though, or <a href="https://github.com/ProjectPhysX/FluidX3D/blob/master/DOCUMENTATION.md#video-rendering">render video</a> to the hard drive with regular [`GRAPHICS`](src/defines.hpp) mode.<br><br>
+  <br>On macOS and Android, [`INTERACTIVE_GRAPHICS`](examples/benchmark/defines.hpp) mode is not supported, as no X11 is available. You can still use [`INTERACTIVE_GRAPHICS_ASCII`](examples/benchmark/defines.hpp) though, or <a href="https://github.com/ProjectPhysX/FluidX3D/blob/master/DOCUMENTATION.md#video-rendering">render video</a> to the hard drive with regular [`GRAPHICS`](examples/benchmark/defines.hpp) mode.<br><br>
 
 </details>
 
